@@ -6,7 +6,8 @@ import re
 main_page_head = '''
 <head>
     <meta charset="utf-8">
-    <title>Fresh Tomatoes!</title>
+    <meta name="viewport" content="width=device-width">
+    <title>Trending Movies</title>
 
     <!-- Bootstrap 3 -->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
@@ -16,7 +17,7 @@ main_page_head = '''
     <style type="text/css" media="screen">
         body {
             padding-top: 80px;
-        }
+            background-color: #000000;        }
         #trailer .modal-dialog {
             margin-top: 200px;
             width: 640px;
@@ -37,7 +38,7 @@ main_page_head = '''
             padding-top: 20px;
         }
         .movie-tile:hover {
-            background-color: #EEE;
+            background-color: #eee;
             cursor: pointer;
         }
         .scale-media {
@@ -105,7 +106,7 @@ main_page_content = '''
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#">Fresh Tomatoes Movie Trailers</a>
+            <a class="navbar-brand" href="#">Awesome Movie Trailers</a>
           </div>
         </div>
       </div>
@@ -121,7 +122,13 @@ main_page_content = '''
 movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
     <img src="{poster_image_url}" width="220" height="342">
-    <h2>{movie_title}</h2>
+    <h2><b>{movie_title}</b></h2>
+    <h4>Genre: {movie_genre}</h4>
+    <h4>Duration: {movie_duration}</h4>
+    <p><h5>Storyline: {movie_storyline}</h5>
+        <h6>Director: {movie_director}</h6>
+        <h6>Producer: {movie_producer}</h6>
+    </p>
 </div>
 '''
 
@@ -137,6 +144,11 @@ def create_movie_tiles_content(movies):
         # Append the tile for the movie with its content filled in
         content += movie_tile_content.format(
             movie_title=movie.title,
+            movie_genre = movie.genre,
+            movie_duration = movie.duration,
+            movie_storyline = movie.storyline,
+            movie_director = movie.director,
+            movie_producer= movie.producer,
             poster_image_url=movie.poster_image_url,
             trailer_youtube_id=trailer_youtube_id
         )
@@ -144,7 +156,7 @@ def create_movie_tiles_content(movies):
 
 def open_movies_page(movies):
   # Create or overwrite the output file
-  output_file = open('fresh_tomatoes.html', 'w')
+  output_file = open('movie_trailers.html', 'w')
 
   # Replace the placeholder for the movie tiles with the actual dynamically generated content
   rendered_content = main_page_content.format(movie_tiles=create_movie_tiles_content(movies))
