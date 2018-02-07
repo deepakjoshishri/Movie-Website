@@ -9,4 +9,5 @@ The page will be opened preferrably in new window of your default browser.
 checkout the screenshot below:
 ![alt text](https://github.com/deepakjoshishri/Movie-Website/blob/master/screenshotReadme.png)
 
+
 pep8 guidelines have been followed at their best.
