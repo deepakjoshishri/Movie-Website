@@ -55,16 +55,10 @@ class Anime(Movie):
     def __init__(self, title, poster_image, genre, youtube_trailer, duration,
                  storyline, director, producer, no_of_seasons,
                  importat_characters):
-        super().__init__(  # Calling Base class constructor
-            title,
-            poster_image,
-            genre,
-            youtube_trailer,
-            duration,
-            storyline,
-            director,
-            producer,
-            )
+        # Calling Base class constructor
+        super().__init__(title, poster_image, genre,
+                         youtube_trailer, duration, storyline,
+                         director, producer)
         self.no_of_episodes = no_of_episodes
         self.important_characters = important_characters
 
