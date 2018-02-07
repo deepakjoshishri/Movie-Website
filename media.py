@@ -6,7 +6,8 @@
 
 class Media:
 
-    """ This class provides a way to store generic information related to media"""
+    """ This class provides a way to store
+    generic information related to media"""
 
     # documentation for base class
 
@@ -21,14 +22,18 @@ class Media:
 
 class Movie(Media):
 
-    """ This is an extenion of Media class that stores information related to movies specifically"""
+    """ This is an extenion of Media class that
+    stores information related to movies specifically"""
 
-    # documentation for child class which inherits attributes of Media class as parent
+    # documentation for child class which
+    # inherits attributes of Media class as parent
 
     # Constructor for child class
 
-    def __init__(self, title, poster_image, genre, youtube_trailer, duration, storyline, director, producer):
-        super().__init__(title, poster_image, genre, youtube_trailer)  # Calling parent class constructor
+    def __init__(self, title, poster_image, genre, youtube_trailer,
+                 duration, storyline, director, producer):
+        # Calling parent class constructor
+        super().__init__(title, poster_image, genre, youtube_trailer)
         self.duration = duration
         self.storyline = storyline
         self.director = director
@@ -39,13 +44,17 @@ class Movie(Media):
 
 class Anime(Movie):
 
-    """ This is an extenion of Media class that stores information related to movies specifically"""
+    """ This is an extenion of Media class that stores
+    information related to movies specifically"""
 
-    # documentation for child class which inherits attributes of My class as parent
+    # documentation for child class which inherits
+    # attributes of My class as parent
 
     # Constructor for child class
 
-    def __init__(self, title, poster_image, genre, youtube_trailer, duration, storyline, director, producer, no_of_seasons, importat_characters):
+    def __init__(self, title, poster_image, genre, youtube_trailer, duration,
+                 storyline, director, producer, no_of_seasons,
+                 importat_characters):
         super().__init__(  # Calling Base class constructor
             title,
             poster_image,
@@ -64,12 +73,17 @@ class Anime(Movie):
 
 class TVShows(Media):
 
-    """ This is an extenion of Media class that stores information related to movies specifically"""
+    """ This is an extenion of Media class that stores
+    information related to movies specifically"""
 
-    # documentation for child class which inherits attributes of Media class as parent
+    # documentation for child class which inherits
+    # attributes of Media class as parent
 
     # Constructor for child class
 
-    def __init__(self, title, poster_image, genre, youtube_trailer, no_of_episodes, storyline, director, producer):
-        super().__init__(title, poster_image, genre, youtube_trailer)  # Calling Base class constructor
-        self.no_of_episodes = no_of_episodes
+    def __init__(self, title, poster_image, genre, youtube_trailer,
+                 no_of_episodes, storyline, director, producer):
+                    # Calling Base class constructor
+                    super().__init__(title, poster_image, genre,
+                                     youtube_trailer)
+                    self.no_of_episodes = no_of_episodes
