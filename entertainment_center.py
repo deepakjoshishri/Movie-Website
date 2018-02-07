@@ -19,7 +19,7 @@ padmaavat = media.Movie(
 
 dangal = media.Movie(
     'Dangal',
-    'http://www.behindwoods.com/hindi-movies/dangal/stills-photos-pictures/dangal-hd-posters-photos-stills-06.jpg',
+    'http://www.behindwoods.com/hindi-movies/dangal/stills-photos-pictures/dangal-hd-posters-photos-stills-06.jpg',  # noqa
     'Drama/Sport',
     'https://www.youtube.com/watch?v=x_7YlGv9u1g',
     '2h : 49m',
@@ -41,11 +41,11 @@ fanaa = media.Movie(
 
 thor = media.Movie(
     'Thor Ragnarok',
-    'https://pre00.deviantart.net/65d1/th/pre/f/2017/166/8/a/8a68ea0511e1062b836871a7a3f9f459-dbct1ki.png',
+    'https://pre00.deviantart.net/65d1/th/pre/f/2017/166/8/a/8a68ea0511e1062b836871a7a3f9f459-dbct1ki.png',  # noqa
     'Fantasy/Science fiction film',
     'https://www.youtube.com/watch?v=ue80QwXMRHg',
     '2h : 10m',
-    'Thor: Ragnarok is a 2017 American superhero film based on the Marvel Comics character Thor.',
+    'Thor: Ragnarok is a 2017 American superhero film based on the Marvel Comics character Thor.',  # noqa
     'Taika Waititi',
     'Kevin Feige',
     )
@@ -56,7 +56,7 @@ jurrasic = media.Movie(
     'Fantasy/Science fiction',
     'https://www.youtube.com/watch?v=lc0UehYemQA',
     '2h : 7m',
-    'During a preview tour, a theme park suffers a major power breakdown that allows its cloned dinosaur exhibits to run amok.',
+    'During a preview tour, a theme park suffers a major power breakdown that allows its cloned dinosaur exhibits to run amok.',  # noqa
     'Steven Spielberg',
     'Kathleen Kennedy',
     )
@@ -67,7 +67,7 @@ beautifulMind = media.Movie(
     'Drama/Romance',
     'https://www.youtube.com/watch?v=aS_d0Ayjw4o',
     '2h : 20m',
-    'John Nash, a brilliant but asocial mathematical genius, finds himself in pain when he encounters a cruel disorder....',
+    'John Nash, a brilliant but asocial mathematical genius, finds himself in pain when he encounters a cruel disorder....',  # noqa
     'Ron Howard',
     'Ron Howard,Brian Grazer',
     )
